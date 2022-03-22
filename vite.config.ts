@@ -6,8 +6,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: 
-  [
+  plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
@@ -16,7 +15,9 @@ export default defineConfig({
       extensions: ['vue', 'md'],
     }),
   ],
-  alias: {
-    '~/': `${path.resolve(__dirname, 'src')}/`,
-  },
+  resolve: {
+    alias: {
+      '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  }
 })
