@@ -1,12 +1,15 @@
 {
   "name": "alarik-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Begonia for Vue 3",
   "scripts": {
     "dev": "vite",
     "start": "pnpm clean:cache && vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
+    "buildx": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
+    "clear": "npx rimraf node_modules",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite"
   },
   "dependencies": {
